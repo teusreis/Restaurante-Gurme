@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+section {
+    margin: 30px auto;
+}
+
+p {
+    font-size: 20px
+}
+
+/* Stilo da barra de navegação */
+div#nave {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo";
+    grid-auto-rows: 50px;
+    padding: 0px;
+    justify-items: end;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 5px rgb(129, 129, 129);
+}
+
+div#nave div {
+    grid-area: logo;
+    justify-self: start;
+    margin-left: 10px
+}
+nav {
+    grid-area: nav;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    display: none;
+}
+nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    margin: 0;
+    padding: 13px;
+    letter-spacing: 5px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    background-color: rgb(172, 172, 172);
+    border-radius: 2px;
+}
+
+/* Stilo do cabeçalho */
+
+section#banner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 45vh;
+    background: url(imagens/banner.jpg) no-repeat center;
+    background-size: 100%;
+}
+
+section#banner h1 {
+    color: rgb(235, 215, 215);
+    padding-left: 24px;
+    display: block;
+    position: relative;
+    top: 80%;
+}
+
+/* Definição do Grid principal */
+div.conteudo {
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-areas:
+    ". sobre ."
+    ". carda ."
+    ". contato .";
+}
+
+/* stilo sobre a empresa */
+section#sobre{
+    grid-area: sobre;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sobre";
+    justify-items: center;
+}
+
+
+section#sobre div#sobretxt {
+    grid-area: sobre;
+    text-align: center;
+}
+
+section#sobre div#sobretxt h2 {
+    font-size: 35px;
+    margin:  40px auto;
+}
+
+section#sobre div#sobretxt h3 {
+    color: rgba(0, 0, 0, 0.596);
+    font-size: 17px;
+    font-style: italic;
+}
+
+section#sobre div#sobretxt p{
+    text-align: justify;
+}
+
+section#sobre div#sobreimg {
+    grid-area: img;
+    display: none;
+}
+section#sobre img{
+    width: 100%;
+}
+
+/* Stilo do carbapio */
+section#menu {
+    grid-area: carda;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "cardapio"
+    "img";
+    justify-items: center;
+}
+
+section#menu div#menucafe{
+    grid-area: cardapio;
+}
+
+
+section#menu div#menucafe h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:  40px;
+}
+
+
+section#menu div#menucafe p {
+    text-align: left;
+}
+
+.prato{
+    font-size: 20px;
+    letter-spacing: 6px;
+}
+
+.descricaoPrato{
+    color: rgb(145, 145, 145);
+    margin-bottom: 40px;
+}
+
+/* stilo da imagem do menu */
+
+section#menu div#cafeimg{
+    grid-area: img;
+}
+
+section#menu img{
+    width: 100%;
+    height: 600px;
+}
+
+/* Stilo da área de contato e contato de lugar */
+
+section#contato{
+    grid-area: contato;
+    border-top: 1px solid rgb(207, 207, 207);
+}
+
+section#contato h2{
+    margin: 40px auto;
+    text-align: center
+}
+
+section#contato p {
+    margin: 15px 0;
+}
+
+section#contato p#endereco {
+    margin: 25px 0;
+    color: rgba(39, 39, 245, 0.7);
+    font-weight: 600;
+}
+
+
+section#contato input, textarea {
+    width: 95%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+textarea{
+    height: 25px;
+}
+
+section#contato input[type=submit] {
+    width: 200px;
+    text-transform: uppercase;
+    background: rgb(206, 203, 203);
+    border: none;
+}
+
+section#contato input[type=submit]:hover {
+    background: rgb(167, 167, 167);   
+}
+
+footer#rodape {
+    background: rgb(233, 233, 233);
+    height: 50px;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+}
+
+footer#rodape p {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+  }
+
+
+
+/* Stilo espesifico para telas de computador ou notebooks */
+@media (min-width: 1000px){
+
+    /* Grid Principal */
+    div.conteudo {
+        max-width: 1600px;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr repeat(4, minmax(1fr, 300px)) 1fr;
+        grid-template-areas:
+        ". sobre sobre sobre sobre ."
+        ". carda carda carda carda ."
+        ". contato contato contato contato ."
+    }
+
+    /* nav bar */
+
+    div#nave {
+        position: sticky;
+        top: 0;   
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo nav" ;
+        align-items: center;
+        z-index: 1;
+    }
+
+    div#nave div {
+        margin-left: 30px
+    }
+    
+    div#nave nav {
+        display: contents;
+        margin-right: 60px;
+
+    }
+    /* Banner */
+
+    section#banner {
+        height: 100vh;
+        background-position: center;
+    }
+    
+    section#banner h1{
+        font-size: 40px
+    }
+
+    /* Grid sobre o restaurante */
+    section#sobre{
+        grid-template-columns: 35vw 50px 35vw;
+        grid-template-areas: "img . sobre";
+        justify-items: center;
+    }
+
+
+    section#sobre div#sobreimg {
+        display: contents;
+    }
+
+    /* Grid menu */
+    section#menu{
+        grid-template-columns: 35vw 50px 35vw;
+        grid-template-areas: "cardapio . img";
+        justify-items: center;
+    }
+
+    section#sobre div {
+        grid-area: img;
+    }
+    
+    section#sobre img{
+        width: 100%;
+    }
+    
+    /* Contato */
+    section#contato{
+        width: 90%;
+    }
+    section#contato h2{
+        text-align: left
+    }
+    
+}

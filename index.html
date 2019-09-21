@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Restaurante</title>
+</head>
+
+<body>
+    <!-- Area da barra de navegação -->
+    <div id="nave">
+        <div class="logo">
+            <h1>Restaurante Gurme</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contato">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Area do banner com o nome da empresa -->
+    <section id="banner">
+        <h1>Restaurante Gurme</h1>
+    </section>
+    <!-- Area sobre a empresa -->
+    <div class="conteudo">
+        <section id="sobre">
+
+            <div id="sobreimg">
+                <img src="imagens/sobre.jpg" alt="">
+            </div>
+
+            <div id="sobretxt">
+                <h2>Sobre o Restaurante</h2>
+                <h3>Tradição desde 1990</h3>
+                <p>The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur.We only use seasonal ingredients. <br><br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.</p>
+            </div>
+
+        </section>
+        <section id="menu">
+            <div id="menucafe">
+                <h2>Café da manha</h2>
+                <p class="prato">Bread Basket</p>
+                <p class="descricaoPrato">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                <p class="prato">Honey Almond Granola with Fruits</p>
+                <p class="descricaoPrato">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                <p class="prato">Belgian Waffle</p>
+                <p class="descricaoPrato">Vanilla flavored batter with malted flour 7.50</p>
+                <p class="prato">Scrambled eggs</p>
+                <p class="descricaoPrato">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                <p class="prato">Blueberry Pancakes</p>
+                <p class="descricaoPrato">With syrup, butter and lots of berries 8.50</p>
+            </div>
+            <div id="cafeimg">
+                <img src="imagens/cafe-da-manha.jpg" alt="">
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contact</h2>
+            <p>Oferecemos serviço completo de catering para qualquer evento, grande ou pequeno. Nós entendemos suas
+                necessidades e vamos atender a comida para satisfazer os critérios mais amplos de todos, tanto a
+                aparência quanto o sabor. Não hesite em nos contatar.</p>
+            <p id="endereco">Av. Paulista, 1500 - Bela Vista, São Paulo - SP</p>
+            <p>Você também pode nos contatar pelo telefone: (11) 9 9999-9999, pelo email: restaurante@gmail.com, você
+                pode nos enviar uma mensagem ou fazer uma reserva aqui:</p>
+
+            <form action="" method="post">
+                <input id="nome" type="text" placeholder="Nome: "><br>
+                <input id="quantidade" type="number" placeholder="Número de pessoas: "><br>
+                <input id="data" type="date" name="" id="data"><br>
+                <textarea id="mensagem" placeholder="Mensagem \ Requisitos especiais"></textarea>
+                <input type="submit" id="enviar" value="Enviar Mensagem">
+            </form>
+        </section>
+    </div>
+    <footer id="rodape">
+        <p>Desenvolved by <span class="copyleft">&copy;</span>Mateus C. Reis</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
